@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP na prática</title>
+</head>
+<body>
+    <nav><a href="index.html">Início</a></nav>
+    <h1>HTTP na prática: requisição e resposta</h1>
+    <p>HTTP é o protocolo utilizado para transferir recursos na Web. O navegador atua como cliente: envia uma requisição ao servidor, que processa o pedido e devolve uma resposta.</p>
+    <h2>Cliente, servidor, requisição e resposta</h2>
+    <ul>
+        <li><strong>Cliente:</strong> normalmente o navegador que solicita um recurso.</li>
+        <li><strong>Servidor:</strong> sistema que recebe a solicitação e fornece uma resposta.</li>
+        <li><strong>Requisição:</strong> mensagem enviada pelo cliente.</li>
+        <li><strong>Resposta:</strong> mensagem devolvida pelo servidor, com status e conteúdo opcional.</li>
+    </ul>
+    <h2>Métodos</h2>
+    <p><strong>GET:</strong> solicita a representação de um recurso, como uma página.</p>
+    <p><strong>POST:</strong> envia dados ao servidor, por exemplo os dados de um formulário.</p>
+    <h2>Exemplo de requisição HTTP</h2>
+    <pre>GET /index.html HTTP/1.1
+Host: exemplo.com
+Accept: text/html</pre>
+    <h2>Exemplo de resposta HTTP</h2>
+    <pre>HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+
+&lt;h1&gt;Olá, mundo!&lt;/h1&gt;</pre>
+    <h2>Códigos de status HTTP</h2>
+    <ul>
+        <li><strong>200 OK:</strong> a requisição foi processada com sucesso.</li>
+        <li><strong>301 Moved Permanently:</strong> o recurso foi movido permanentemente para outro endereço.</li>
+        <li><strong>302 Found:</strong> o recurso está temporariamente em outro endereço.</li>
+        <li><strong>400 Bad Request:</strong> a requisição contém erro ou não pode ser entendida.</li>
+        <li><strong>403 Forbidden:</strong> o servidor entendeu a requisição, mas não autoriza o acesso.</li>
+        <li><strong>404 Not Found:</strong> o recurso solicitado não foi encontrado.</li>
+        <li><strong>500 Internal Server Error:</strong> ocorreu um erro interno no servidor.</li>
+    </ul>
+</body>
+</html>

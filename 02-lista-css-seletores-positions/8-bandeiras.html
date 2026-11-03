@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bandeiras com CSS</title>
+<style>
+body { font-family: Arial; display: grid; gap: 25px; padding: 20px; }
+nav { display: flex; flex-wrap: wrap; gap: 15px; }
+.bandeira { width: 240px; height: 150px; border: 1px solid #ddd; position: relative; overflow: hidden; }
+#japao.bandeira { background: white; }
+#japao .circulo { width: 65px; height: 65px; border-radius: 50%; background: #bc002d; position: absolute; top: 42px; left: 87px; }
+#alemanha { background: linear-gradient(to bottom, #000 0 33.33%, #dd0000 33.33% 66.66%, #ffce00 66.66%); }
+#holanda { background: linear-gradient(to bottom, #ae1c28 0 33.33%, white 33.33% 66.66%, #21468b 66.66%); }
+#italia { background: linear-gradient(to right, #009246 0 33.33%, white 33.33% 66.66%, #ce2b37 66.66%); }
+#brasil { background: #009b3a; }
+#brasil .losango { position: absolute; width: 135px; height: 100px; background: #ffdf00; top: 25px; left: 52px; clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%); }
+#brasil .circulo { position: absolute; width: 58px; height: 58px; background: #002776; border-radius: 50%; top: 46px; left: 91px; }
+</style>
+</head>
+<body>
+<nav><a href="#japao">Bandeira Japão</a><a href="#alemanha">Alemanha</a><a href="#holanda">Holanda</a><a href="#italia">Itália</a><a href="#brasil">Brasil</a></nav>
+<h2>Japão</h2><div class="bandeira" id="japao"><div class="circulo"></div></div>
+<h2>Alemanha</h2><div class="bandeira" id="alemanha"></div>
+<h2>Holanda</h2><div class="bandeira" id="holanda"></div>
+<h2>Itália</h2><div class="bandeira" id="italia"></div>
+<h2>Brasil</h2><div class="bandeira" id="brasil"><div class="losango"></div><div class="circulo"></div></div>
+</body>
+</html>

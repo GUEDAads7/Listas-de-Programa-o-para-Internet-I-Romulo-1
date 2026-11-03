@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Layout com Flexbox</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; }
+.pagina { width: 100vw; height: 100vh; display: flex; flex-direction: column; background: #eee; }
+.topo { height: 18%; background: #252525; display: flex; align-items: center; gap: 12px; padding: 20px; }
+.bola { width: 24px; height: 24px; border-radius: 50%; background: #00b8b8; }
+.corpo { flex: 1; display: flex; min-height: 0; }
+nav { width: 23%; background: #f5822b; color: white; display: grid; place-items: center; font-weight: bold; }
+.conteudo { flex: 1; display: flex; flex-direction: column; }
+header { height: 18%; background: #00a3d7; display: grid; place-items: center; color: white; }
+main { flex: 1; background: #604c9c; display: grid; place-items: start center; padding: 20px; color: white; }
+footer { height: 18%; background: #0797b8; display: grid; place-items: center; color: white; }
+</style></head>
+<body><div class="pagina"><div class="topo"><span class="bola"></span><span class="bola"></span><span class="bola"></span></div><div class="corpo"><nav>NAVEGAÇÃO</nav><div class="conteudo"><header>CABEÇALHO</header><main>CONTEÚDO</main><footer>RODAPÉ</footer></div></div></div></body></html>

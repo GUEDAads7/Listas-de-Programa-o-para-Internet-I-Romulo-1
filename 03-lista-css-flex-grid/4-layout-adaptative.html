@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Layout adaptativo</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 20px; font-family: Arial; }
+.layout { max-width: 1000px; margin: auto; display: grid; gap: 8px; grid-template-columns: 1fr 3fr 1fr; grid-template-rows: 65px 55px minmax(220px, 1fr) 55px 45px; grid-template-areas: "header header header" "banner banner banner" "left main right" "left low right" "footer footer footer"; min-height: 650px; }
+.layout div { display: grid; place-items: center; font-weight: bold; padding: 10px; }
+.header { grid-area: header; background: #f0b900; } .banner { grid-area: banner; background: #d94137; }
+.left { grid-area: left; background: #15965b; } .main { grid-area: main; background: #4381df; }
+.right { grid-area: right; background: #f0b900; } .low { grid-area: low; background: #15965b; }
+.footer { grid-area: footer; background: #4381df; }
+@media screen and (max-width: 600px) {
+    .layout { grid-template-columns: 1fr; grid-template-rows: 55px 45px 55px minmax(250px,1fr) 55px 45px 45px; grid-template-areas: "header" "banner" "left" "main" "right" "low" "footer"; min-height: 800px; }
+}
+</style></head>
+<body><main class="layout"><div class="header">Header</div><div class="banner">Banner</div><div class="left">Left Aside</div><div class="main">Main Content</div><div class="right">Right Aside</div><div class="low">Low Content</div><div class="footer">Footer</div></main></body></html>

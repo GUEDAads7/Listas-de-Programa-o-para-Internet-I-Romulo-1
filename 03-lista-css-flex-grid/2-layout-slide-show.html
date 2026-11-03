@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Slide show com Flexbox</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #171717; }
+.galeria { width: min(900px, 90vw); height: 430px; display: flex; gap: 10px; }
+.slide { flex: 1; min-width: 0; border-radius: 18px; overflow: hidden; position: relative; transition: flex .6s ease; background-size: cover; background-position: center; cursor: pointer; }
+.slide:hover { flex: 5; }
+.slide span { position: absolute; bottom: 15px; left: 15px; color: white; background: #0008; padding: 8px 12px; border-radius: 20px; }
+.s1 { background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=900'); }
+.s2 { background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900'); }
+.s3 { background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900'); }
+.s4 { background-image: url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=900'); }
+.s5 { background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900'); }
+</style></head>
+<body><main class="galeria"><div class="slide s1"><span>Natureza</span></div><div class="slide s2"><span>Montanhas</span></div><div class="slide s3"><span>Viagem</span></div><div class="slide s4"><span>Amanhecer</span></div><div class="slide s5"><span>Lago</span></div></main></body></html>

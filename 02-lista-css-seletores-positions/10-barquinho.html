@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Barquinho no mar</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+.cena { width: 100vw; height: 100vh; position: relative; overflow: hidden; background: linear-gradient(#b8e7f5, #effcff 70%, #3d5cff 70%); }
+.nuvem { position: absolute; width: 120px; height: 45px; top: 18%; left: -150px; background: white; border-radius: 50px; box-shadow: 25px -18px 0 2px white, 55px 0 0 5px white; animation: nuvem 24s linear infinite; }
+.mar { position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background: #4058f5; overflow: hidden; }
+.mar::before, .mar::after { content: ""; position: absolute; width: 200%; height: 55px; left: -20%; top: -25px; border-radius: 45%; background: rgba(255,255,255,.22); animation: ondas 7s linear infinite; }
+.mar::after { top: -10px; opacity: .5; animation-duration: 11s; }
+.barco { position: absolute; z-index: 2; left: -130px; bottom: 28%; font-size: 85px; animation: navegar 13s linear infinite, balanco 2s ease-in-out infinite alternate; }
+@keyframes navegar { from { left: -130px; } to { left: calc(100% + 130px); } }
+@keyframes balanco { from { transform: rotate(-5deg) translateY(0); } to { transform: rotate(5deg) translateY(8px); } }
+@keyframes nuvem { from { left: -180px; } to { left: 110%; } }
+@keyframes ondas { from { transform: translateX(0) rotate(0); } to { transform: translateX(-10%) rotate(360deg); } }
+</style>
+</head>
+<body><main class="cena"><div class="nuvem"></div><div class="barco">⛵</div><div class="mar"></div></main></body>
+</html>
