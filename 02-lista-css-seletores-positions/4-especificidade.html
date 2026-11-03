@@ -4,27 +4,27 @@
 <meta charset="UTF-8">
 <title>Exemplo especificidade de seletores</title>
 <style>
-    /* Regra 1 */ li { color: red; }
-    /* Regra 2 */ .churras { color: green; }
-    /* Regra 3 */ .fruta { color: gray; }
-    /* Regra 4 */ li + li.churras { color: black; }
-    /* Regra 5 */ .churras[draggable="true"] { color: magenta; }
-    /* Regra 6 */ #lip1, #lip2, #lip3 { color: blue; }
-    /* Regra 7 */ #lip3.fruta { color: orange; }
-    /* Regra 8 */ ol > li.churras#lip5 { color: purple; }
+    /* R1 */ li { color: red; }
+    /* R2 */ .churras { color: green; }
+    /* R3 */ .fruta { color: gray; }
+    /* R4 */ li + li.churras { color: black; }
+    /* R5 */ .churras[draggable="true"] { color: magenta; }
+    /* R6 */ #lip1, #lip2, #lip3 { color: blue; }
+    /* R7 */ #lip3.fruta { color: orange; }
+    /* R8 */ ol > li.churras#lip5 { color: purple; }
 </style>
 </head>
 <body>
     <h1>Especificidade de seletores</h1>
     <ol>
-        <!-- item 1 --> <li id="lip0">Abacaxi</li>
-        <!-- item 2 --> <li class="fruta">Melão</li>
-        <!-- item 3 --> <li id="lip2" class="fruta">Pera</li>
-        <!-- item 4 --> <li id="lip3" class="fruta">Uva</li>
-        <!-- item 5 --> <li id="lip4" class="fruta">Maçã</li>
-        <!-- item 6 --> <li class="churras">Carne</li>
-        <!-- item 7 --> <li class="churras">Linguiça</li>
-        <!-- item 8 --> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+        <!-- i1 --> <li id="lip0">Abacaxi</li>
+        <!-- i2 --> <li class="fruta">Melão</li>
+        <!-- i3 --> <li id="lip2" class="fruta">Pera</li>
+        <!-- i4 --> <li id="lip3" class="fruta">Uva</li>
+        <!-- i5 --> <li id="lip4" class="fruta">Maçã</li>
+        <!-- i6 --> <li class="churras">Carne</li>
+        <!-- i7 --> <li class="churras">Linguiça</li>
+        <!-- i8 --> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
     </ol>
     <p>A cor final depende da correspondência dos seletores, da especificidade e da ordem das regras.</p>
 </body>
